@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vertical align demo</title>
+    <style>
+        .method4Outer,.method3Outer,.method2Outer,
+        .method1Outer {
+            width: 300px;
+            height: 200px;
+        }
+        
+        .method4Inner,.method3Inner,.method2Inner,
+        .method1Inner {
+            width: 150px;
+            height: 100px;
+            background: #ECEFF1;
+        }
+        
+        .method1Outer {
+            background: #2196F3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .method2Outer {
+            position: relative;
+            background: #2196F3;
+            text-align: center;
+        }
+        
+        .method2Inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .method3Outer{
+           background: #2196F3;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .method3Inner{
+            transform: translateX(50%);
+        }
+        .method4Outer{
+                       background: #2196F3;
+            text-align: center;
+        }
+        .method4Outer:before{
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+        .method4Inner{
+            display: inline-block;
+vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Method 1: Using Flex</h1>
+    <div class="method1Outer">
+        <div class="method1Inner">
+
+        </div>
+    </div>
+
+    <h1>Method 2: Using Position absolute and relative</h1>
+    <div class="method2Outer">
+        <div class="method2Inner">
+
+        </div>
+    </div>
+<h1>Method 3: Using Vertical Align</h1>
+    <div class="method3Outer">
+        <div class="method3Inner">
+
+        </div>
+    </div>
+    <h1>Method 4: Using the Unknown element before</h1>
+     <div class="method4Outer">
+        <div class="method4Inner">
+
+        </div>
+    </div>
+</body>
+
+</html>
